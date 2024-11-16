@@ -1,7 +1,17 @@
 """
+
 descricao: exercicios de fixacao
 autor: wellington moreira
+
 """
+
+# indice:
+
+#     1 - Inteiros - linha 22
+#     2 - Reais - linha 51
+#     3 - Strings - linha 81
+#     4 - Booleanos -
+#     5 - try/except e if-
 
 def formata_titulo(titulo:str):
     print('\n'+'-'*100)
@@ -38,7 +48,6 @@ class Inteiros:
         return f'Quadrado de {num} = {num**2}'
 
 # reais: exercício 06-10
-
 class Reais:
     def exercicio_06(self):
         formata_titulo('Escreva um programa que receba dois números flutuantes e realize sua adição.')
@@ -68,9 +77,38 @@ class Reais:
         formata_titulo('Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.')
         raio = float(input('Digite o raio: '))
         return f'Área de um círculo de raio {raio} = {3.14*raio**2}'
-    
+
+class Strings_exercicios:
+    def exercicio_11(self):
+        formata_titulo('Escreva um programa que receba uma string do usuário e a converta para maiúsculas.')
+        string = input('Digite uma string: ')
+        return f'{string} em maiúsculas = {string.upper()}'
+
+    def exercicio_12(self):
+        formata_titulo('Crie um programa que receba o nome completo do usuário e imprima o nome com todas as letras minúsculas.')
+        nome = input('Digite seu nome: ')
+        return f'{nome} em minúsculas = {nome.lower()}'
+
+    def exercicio_13(self):
+        formata_titulo('Desenvolva um programa que peça ao usuário para inserir uma frase e, em seguida, imprima esta frase sem espaços em branco no início e no final.')
+        frase = input('Digite uma frase: ')
+        return f'Frase sem espaços: {frase.strip()}'
+
+    def exercicio_14(self):
+        formata_titulo('Faça um programa que peça ao usuário para digitar uma data no formato "dd/mm/aaaa" e, em seguida, imprima o dia, o mês e o ano separadamente.')
+        data = input('Digite uma data no formato dd/mm/aaaa: ')
+        data_separada = data.split('/')
+        return f'Dia: {data_separada[0]}\nMês: {data_separada[1]}\nAno: {data_separada[2]}'
+
+    def exercicio_15(self):
+        formata_titulo('Escreva um programa que concatene duas strings fornecidas pelo usuário.')
+        string1 = input('Digite a primeira string: ')
+        string2 = input('Digite a segunda string: ')
+        return f'{string1} + {string2} = {string1+string2}'
+
 # exercicios_inteiros = Inteiros()
-exercicios_reais = Reais()
+# exercicios_reais = Reais()
+# exercicios_strings = Strings_exercicios()
 
 # print(exercicios_inteiros.exercicio_01())
 # print(exercicios_inteiros.exercicio_02())
@@ -81,4 +119,9 @@ exercicios_reais = Reais()
 # print(exercicios_reais.exercicio_07())
 # print(exercicios_reais.exercicio_08())
 # print(exercicios_reais.exercicio_09())
-# print(exercicios_reais.exercicio_10())  
+# print(exercicios_reais.exercicio_10())
+# print(exercicios_strings.exercicio_11())
+# print(exercicios_strings.exercicio_12())
+# print(exercicios_strings.exercicio_13())
+# print(exercicios_strings.exercicio_14())
+# print(exercicios_strings.exercicio_15())
