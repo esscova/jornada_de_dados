@@ -8,7 +8,7 @@ autor: wellington moreira
 def verifica_string(string:str) -> str:
     if len(string) == 0:
         raise ValueError("O nome não pode estar vazio.")
-    elif any(char.isdigit() for char in string):
+    elif string.isdigit():
         raise ValueError("O nome não deve conter números.")
     else:
         return string
