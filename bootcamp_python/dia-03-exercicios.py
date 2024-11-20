@@ -83,6 +83,32 @@ Objetivo: Dada uma lista de números, extrair apenas aqueles que são pares.
  Objetivo: Dado um conjunto de registros de vendas, calcular o total de vendas por categoria.
     """
 
+    titulo_11:str = """
+Exercício 11. Leitura de Dados até Flag
+Objetivo: Ler dados de entrada até que uma palavra-chave específica ("sair") seja fornecida.
+    """
+
+    titulo_12:str = """
+Validação de Entrada
+Solicitar ao usuário um número dentro de um intervalo específico até que a entrada seja válida.
+    """
+   
+    titulo_13:str = """
+Consumo de API Simulado
+Simular o consumo de uma API paginada, 
+onde cada "página" de dados é processada em loop até que não haja mais páginas.
+    """
+
+    titulo_14:str = """
+Tentativas de Conexão
+Simular tentativas de reconexão a um serviço com um limite máximo de tentativas.
+    """
+
+    titulo_15:str = """
+Exercício 15. Processamento de Dados com Condição de Parada
+Processar itens de uma lista até encontrar um valor específico que indica a parada.
+    """
+
     def exercicio_01(self:str) -> None:
         print(self.titulo01)
         try:
@@ -317,6 +343,140 @@ Objetivo: Dada uma lista de números, extrair apenas aqueles que são pares.
         except ValueError:
             print('Erro na obtencao dos números')
 
+    def exercicio_11(self:str) -> None:
+        print(self.titulo_11)
+        try:
+            dados:list=[]
+            entrada:str=''
+           
+            while entrada.lower() != 'sair':
+                try:
+                    entrada:str = input('Digite os dados (ou "sair" para encerrar): ').strip()
+                    if entrada.lower() != 'sair':
+                        dados.append(entrada)
+                except:
+                    raise ValueError
+            
+            print('Dados armazenados:', dados)
+
+        except ValueError:
+            print('Erro na obtencao dos dados')
+
+    def exercicio_12(self:str) -> None:
+        print(self.titulo_12)
+        while True:
+            try:
+                while True:
+                    valor:str = input('Digite um valor entre 1 e 10: ').strip().replace(',', '.')
+
+                    valor = int(float(valor))
+                    
+                    if not isinstance(valor, int):
+                        raise TypeError('Entrada inválida')
+                    
+                    break
+                    
+                
+                while valor < 1 or valor > 10:
+                    print('Valor fora do intervalo permitido')
+                    valor = int(input('Digite um valor entre 1 e 10: '))
+
+                print(f'Valor digitado: {valor}')
+                break
+
+            except ValueError as ve:
+                print(f'Erro: {ve}')
+            except TypeError as te:
+                print(f'Erro: {te}')
+
+    def exercicio_13(self:str) -> None:
+        print(self.titulo_13)
+
+        try:
+            pagina_atual:int = 1
+            total_paginas:int = 10
+
+            while pagina_atual <= total_paginas:
+                print(f'Pagina {pagina_atual} de {total_paginas}')
+                pagina_atual += 1
+
+        except ValueError as ve:
+            print(f'Erro: {ve}')
+
+    def exercicio_14(self:str) -> None:
+        print(self.titulo_14)
+
+        try:
+            tentativas:int = 0
+            limite_tentativas:int = 3
+            conexao:bool = False
+
+            while tentativas < limite_tentativas or conexao:
+                print(f'Tentativa {tentativas + 1} de {limite_tentativas}')
+                tentativas += 1
+
+                try:
+                    valor:int = int(input('Digite um número inteiro para conectar [entre 1 e 10]: '))
+                    
+                    if valor >= 1 and valor <= 10:
+                        conexao = True
+                        print('Conectado')
+                    
+                        break
+
+                    if tentativas == limite_tentativas:
+                        print('Limite de tentativas atingido. Encerrando o programa.')
+                
+                except ValueError as ve:
+                    print(f'Erro: {ve}')
+
+
+        except ValueError as ve:
+            print(f'Erro: {ve}')
+
+    def exercicio_15(self:str) -> None:
+        print(self.titulo_15)
+
+        try:
+            print('Lista de compras:')
+
+            lista_compras:list = []
+            while True:
+                try:
+                    compras:str = input('Digite o nome do produto: [ou "sair" para encerrar] ')
+                    
+                    if compras != 'sair':
+                        lista_compras.append(compras)
+                   
+                    if compras.lower() == 'sair':
+                        print('Encerrando o programa.')
+                        print(f'Lista de compras: {lista_compras}')
+                        break
+                    
+
+                    print(f'Produto adicionado: {compras}')
+
+                except ValueError as ve:
+                    print(f'Erro: {ve}')
+
+        except ValueError as ve:
+            print(f'Erro: {ve}')
+
 if __name__ == '__main__':
     exercicio = Exercicio()
+
+    exercicio.exercicio_01()
+    exercicio.exercicio_02()
+    exercicio.exercicio_03()
+    exercicio.exercicio_04()
+    exercicio.exercicio_05()
+    exercicio.exercicio_06()
+    exercicio.exercicio_07()
+    exercicio.exercicio_08()
+    exercicio.exercicio_09()
     exercicio.exercicio_10()
+    exercicio.exercicio_11()
+    exercicio.exercicio_12()
+    exercicio.exercicio_13()
+    exercicio.exercicio_14()
+    exercicio.exercicio_15()
