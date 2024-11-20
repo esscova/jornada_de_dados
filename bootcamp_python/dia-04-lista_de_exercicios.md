@@ -32,3 +32,13 @@
 14. **Dicionários**: Extraindo chaves e valores de um dicionário, dado um dicionário, criar listas separadas para suas chaves e valores. 
 
 15. **Dicionários**: Dada uma string, contar a frequência de cada caractere usando um dicionário.
+
+16. **Funções**: Escreva uma função que receba uma lista de números e retorne a soma de todos os números.
+
+17. **Funções**: Crie uma função que receba um número como argumento e retorne True se o número for primo e False caso contrário.
+
+18. **Funções**: Desenvolva uma função que receba uma string como argumento e retorne essa string revertida.
+
+19. **Funções**: Implemente uma função que receba dois argumentos: uma lista de números e um número. A função deve retornar todas as combinações de pares na lista que somem ao número dado.
+
+20. **Funções**: Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas

@@ -128,38 +128,93 @@ def exercicio_15(string:str) -> None:
 
     print(dicionario)
 
-if __name__ == '__main__':
-    # exercicio_01()
-    # exercicio_02()
-    # exercicio_03('1984', 'George Orwell', 1949)
-    # exercicio_04('O rato roeu a roupa do rei Raúl de Roma')
-    # exercicio_05(['maçã', 'banana', 'cereja'], [0.45, 0.30, 0.65])
-    # exercicio_06(['user@example.com', 'admin@example.com', 'user@example.com', 'manager@example.com'])
-    # exercicio_07([22, 15, 30, 17, 18])
-    
-    # exercicio_08([
-    # {"nome": "Bob", "idade": 25},
-    # {"nome": "Carol", "idade": 20},
-    # {"nome": "Alice", "idade": 30}
-    # ])
-    
-    # exercicio_09([10, 20, 30, 40, 50])
-    # exercicio_10([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-    
-    # exercicio_11([
-    # {"id": 1, "nome": "Teclado", "preço": 100},
-    # {"id": 2, "nome": "Mouse", "preço": 80},
-    # {"id": 3, "nome": "Monitor", "preço": 300}
-    # ], 2, 90)
-    
-    # exercicio_12(
-    #     d1={"a": 1, "b": 2},
-    #     d2={"c": 3, "d": 4}
-    # )
-    
-    # exercicio_13(estoque={"Teclado": 10, "Mouse": 0, "Monitor": 3, "CPU": 0})
+# Exercício 16
+# Funções: Escreva uma função que receba uma lista de números e retorne a soma de todos os números.
+def exercicio_16(numeros:list) -> None:
+    print(sum(numeros))
 
-    # exercicio_14(dicionario={"a": 1, "b": 2, "c": 3, "d": 4, "e": 5})
+# Exercício 17
+# Funções: Crie uma função que receba um número como argumento e retorne True se o número for primo e False caso contrário.
+def exercicio_17(num:int) -> bool:
+    if num % 2 == 0:
+        print(f'{num} eh par')
+        return False
+            
+    print(f'{num} eh primo')
+    return True
+
+# Exercício 18
+# Funções: Desenvolva uma função que receba uma string como argumento e retorne essa string revertida.
+def exercicio_18(string:str) -> str:
+    if string == '':
+        print('String vazia')
     
-    # exercicio_15('engenharia de dados')
+    if not isinstance(string, str):
+        print('Argumento inválido')
+
+    if len(string)<3:
+        print('String muito curta')
+    
+    string_invertida:str = string[::-1].lower()
+    print(string_invertida)
+    return string_invertida
+
+# Exercício 19
+# Funções: Implemente uma função que receba dois argumentos: uma lista de números e um número. A função deve retornar todas as combinações de pares na lista que somem ao número dado.
+def exercicio_19(numeros:list, numero:int) -> None:
+    print(f'Numeros: {numeros}\nNumero: {numero}\n')
+    
+    lista:list = [num for num in numeros if (num + numero) % 2 == 0]
+
+    print(f'Combinações de Pares na lista que somem ao numero: {lista}')
+
+# Exercício 20
+# Funções: Escreva uma função que receba um dicionário e retorne uma lista de chaves ordenadas
+def exercicio_20(dicionario:dict) -> None:
+    print(sorted(dicionario.keys()))
+
+if __name__ == '__main__':
+    exercicio_01()
+    exercicio_02()
+    exercicio_03('1984', 'George Orwell', 1949)
+    exercicio_04('O rato roeu a roupa do rei Raúl de Roma')
+    exercicio_05(['maçã', 'banana', 'cereja'], [0.45, 0.30, 0.65])
+    exercicio_06(['user@example.com', 'admin@example.com', 'user@example.com', 'manager@example.com'])
+    exercicio_07([22, 15, 30, 17, 18])
+    
+    exercicio_08([
+    {"nome": "Bob", "idade": 25},
+    {"nome": "Carol", "idade": 20},
+    {"nome": "Alice", "idade": 30}
+    ])
+    
+    exercicio_09([10, 20, 30, 40, 50])
+    exercicio_10([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    
+    exercicio_11([
+    {"id": 1, "nome": "Teclado", "preço": 100},
+    {"id": 2, "nome": "Mouse", "preço": 80},
+    {"id": 3, "nome": "Monitor", "preço": 300}
+    ], 2, 90)
+    
+    exercicio_12(
+        d1={"a": 1, "b": 2},
+        d2={"c": 3, "d": 4}
+    )
+    
+    exercicio_13(estoque={"Teclado": 10, "Mouse": 0, "Monitor": 3, "CPU": 0})
+
+    exercicio_14(dicionario={"a": 1, "b": 2, "c": 3, "d": 4, "e": 5})
+    
+    exercicio_15('engenharia de dados')
+
+    exercicio_16([1, 2, 3, 4, 5])
+
+    exercicio_17(7)
+
+    exercicio_18('OvO')
+
+    exercicio_19([1, 2, 3, 4, 5], 6)
+
+    exercicio_20({'c': 3, 'b': 2, 'a': 1,})
     ...
