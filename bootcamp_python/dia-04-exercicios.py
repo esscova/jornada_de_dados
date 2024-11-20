@@ -54,10 +54,50 @@ def exercicio_05(items:list, precos:list) -> None:
     total = sum(precos)
     print(f'Total: {total}')
 
+# Exercício 06
+# Listas: Dada a lista de emails ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"], remover todos os duplicados.
+def exercicio_06(emails:list) -> None:
+    emails = list(set(emails))
+    print(emails)
+
+# Exercício 07
+# Listas: Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
+def exercicio_07(idades:list) -> None:
+    idades = [idade for idade in idades if idade >= 18]
+    print(idades)
+
+# Exercício 08
+# Dicionários: Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
+def exercicio_08(pessoas:list) -> None:
+    pessoas = sorted(pessoas, key=lambda pessoa: pessoa['nome'])
+    print(pessoas)
+
+# Exercício 09
+# Listas: Dado um conjunto de números, calcule a média aritmética.
+def exercicio_09(numeros:list) -> None:
+    media:float = sum(numeros) / len(numeros)
+    print('Média: ', media)
+
+# Exercício 10
+# Listas: Dividindo dados em grupos, Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
+def exercicio_10(valores:list) -> None:
+    pares:list = [num for num in valores if num % 2 == 0]
+    impares:list = [num for num in valores if num % 2 != 0]
+    print(f'Valores pares: {pares}\nValores ímpares: {impares}')
+
 if __name__ == '__main__':
     # exercicio_01()
     # exercicio_02()
     # exercicio_03('1984', 'George Orwell', 1949)
     # exercicio_04('O rato roeu a roupa do rei Raúl de Roma')
     # exercicio_05(['maçã', 'banana', 'cereja'], [0.45, 0.30, 0.65])
+    # exercicio_06(['user@example.com', 'admin@example.com', 'user@example.com', 'manager@example.com'])
+    # exercicio_07([22, 15, 30, 17, 18])
+    # exercicio_08([
+    # {"nome": "Bob", "idade": 25},
+    # {"nome": "Carol", "idade": 20},
+    # {"nome": "Alice", "idade": 30}
+    # ])
+    # exercicio_09([10, 20, 30, 40, 50])
+    # exercicio_10([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
     ...

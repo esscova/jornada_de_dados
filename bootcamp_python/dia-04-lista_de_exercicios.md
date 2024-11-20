@@ -13,15 +13,15 @@
 
 5. **Listas**: Calcule o preço total da lista de compras ["maçã", "banana", "cereja"] com preços [0.45, 0.30, 0.65]
 
-6. **Estruturas de Dados**: Criar uma lista com os números de 1 a 10 e imprimir o quadrado de cada número usando um loop.
+6. **Listas**: Dada a lista de emails ["user@example.com", "admin@example.com", "user@example.com", "manager@example.com"], remova todos os duplicados.
 
-7. **Dicionário de Produtos**: Criar um dicionário para armazenar informações de um produto (nome, preço e quantidade) e imprimir cada informação.
+7. **Listas**: Dada uma lista de idades, filtrar apenas aquelas que são maiores ou iguais a 18.
 
-8. **Contagem de Palavras**: Criar uma função que recebe uma string e conta o número de ocorrências de cada palavra.
+8. **Dicionários**: Dada uma lista de dicionários representando pessoas, ordená-las pelo nome.
 
-9. **Normalização de Dados**: Criar uma função que normaliza uma lista de números (escala 0 a 1).
+9. **Listas**: Dado um conjunto de números, calcule a média aritmética.
 
-10. **Divisão de Listas**: Escrever uma função que recebe uma lista de números e retorna duas listas: uma com pares e outra com ímpares.
+10. **Listas**: Dividindo dados em grupos, Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
 
 11. **Filtragem de Dados**: Criar uma função que filtra dicionários com base em um critério (exemplo: quantidade > 0).
 
