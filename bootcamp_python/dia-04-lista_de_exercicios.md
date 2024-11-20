@@ -23,12 +23,12 @@
 
 10. **Listas**: Dividindo dados em grupos, Dada uma lista de valores, dividir em duas listas: uma para valores pares e outra para ímpares.
 
-11. **Filtragem de Dados**: Criar uma função que filtra dicionários com base em um critério (exemplo: quantidade > 0).
+11. **Dicionários**: Atualizando dados, dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico.
 
-12. **Ordenação**: Implementar uma função que recebe uma lista de dicionários (exemplo: produtos) e ordena com base em um campo específico (exemplo: preço).
+12. **Dicionários**: Unindo dicionários, dados dois dicionários, fundi-los em um único dicionário.
 
-13. **Leitura de CSV**: Ler um arquivo CSV e retornar todos os registros em formato de dicionário.
+13. **Dicionários**: Filtrando dados de um dicionário, dado um dicionário de estoque de produtos, filtrar aqueles com quantidade maior que 0.
 
-14. **Validação de Entrada**: Criar uma função que valida se uma string é um email válido (contém "@" e ".").
+14. **Dicionários**: Extraindo chaves e valores de um dicionário, dado um dicionário, criar listas separadas para suas chaves e valores. 
 
-15. **Cálculo de Vendas**: Criar uma função que processa um dicionário de vendas e calcula o total por categoria.
+15. **Dicionários**: Dada uma string, contar a frequência de cada caractere usando um dicionário.

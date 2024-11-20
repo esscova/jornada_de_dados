@@ -85,6 +85,49 @@ def exercicio_10(valores:list) -> None:
     impares:list = [num for num in valores if num % 2 != 0]
     print(f'Valores pares: {pares}\nValores ímpares: {impares}')
 
+# Exercício 11
+# Dicionários: Atualizando dados, dada uma lista de dicionários representando produtos, atualizar o preço de um produto específico.
+def exercicio_11(produtos:list, id:int, preco:float) -> None:
+    for produto in produtos:
+        if produto['id'] == id:
+            print(f'\nProduto encontrado\nID: {produto["id"]}\nNome: {produto["nome"]}\nPreço: R$ {produto['preço']} \natualizando preço...\n')
+            produto['preço'] = preco
+    
+    print('\nProdutos atualizados:')
+    for i in produtos:
+        print(i)
+
+# Exercício 12
+# Dicionários: Unindo dicionários, dados dois dicionários, fundi-los em um único dicionário.
+def exercicio_12(d1:dict, d2:dict) -> None:
+    d3:dict = {**d1, **d2}
+    print(d3)
+
+# Exercício 13
+# Dicionários: Filtrando dados de um dicionário, dado um dicionário de estoque de produtos, filtrar aqueles com quantidade maior que 0.
+def exercicio_13(estoque:dict) -> None:
+    estoque:dict = {k:v for k, v in estoque.items() if v > 0}
+    print(estoque)
+
+# Exercício 14
+# Dicionários: Extraindo chaves e valores de um dicionário, dado um dicionário, criar listas separadas para suas chaves e valores. 
+def exercicio_14(dicionario:dict) -> None:
+    chaves:list = list(dicionario.keys())
+    valores:list = list(dicionario.values())
+    print(f'Chaves: {chaves}\nValores: {valores}')
+
+# Exercício 15
+# Dicionários: Dada uma string, contar a frequência de cada caractere usando um dicionário.
+def exercicio_15(string:str) -> None:
+    dicionario:dict = {}
+    for char in string:
+        if char not in dicionario:
+            dicionario[char] = 1
+        else:
+            dicionario[char] += 1
+
+    print(dicionario)
+
 if __name__ == '__main__':
     # exercicio_01()
     # exercicio_02()
@@ -93,11 +136,30 @@ if __name__ == '__main__':
     # exercicio_05(['maçã', 'banana', 'cereja'], [0.45, 0.30, 0.65])
     # exercicio_06(['user@example.com', 'admin@example.com', 'user@example.com', 'manager@example.com'])
     # exercicio_07([22, 15, 30, 17, 18])
+    
     # exercicio_08([
     # {"nome": "Bob", "idade": 25},
     # {"nome": "Carol", "idade": 20},
     # {"nome": "Alice", "idade": 30}
     # ])
+    
     # exercicio_09([10, 20, 30, 40, 50])
     # exercicio_10([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    
+    # exercicio_11([
+    # {"id": 1, "nome": "Teclado", "preço": 100},
+    # {"id": 2, "nome": "Mouse", "preço": 80},
+    # {"id": 3, "nome": "Monitor", "preço": 300}
+    # ], 2, 90)
+    
+    # exercicio_12(
+    #     d1={"a": 1, "b": 2},
+    #     d2={"c": 3, "d": 4}
+    # )
+    
+    # exercicio_13(estoque={"Teclado": 10, "Mouse": 0, "Monitor": 3, "CPU": 0})
+
+    # exercicio_14(dicionario={"a": 1, "b": 2, "c": 3, "d": 4, "e": 5})
+    
+    # exercicio_15('engenharia de dados')
     ...
