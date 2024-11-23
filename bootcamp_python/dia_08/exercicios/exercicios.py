@@ -68,7 +68,7 @@ def salvar_dados(dados:pd.DataFrame, caminho_arquivo:str, formato:list) -> None:
         print(f'Erro ao salvar dados: {e}')
 
 if __name__ == '__main__':
-    pasta = 'dia-08-dados'
+    pasta = 'data'
     dados = extrair_dados_json(caminho_arquivo=pasta)
     dados_novos=transformar_dados(dados=dados)
     salvar_dados(dados=dados_novos, caminho_arquivo=pasta, formato=['csv', 'parquet'])
