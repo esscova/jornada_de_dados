@@ -71,7 +71,7 @@ def calcular_total_vendas(categorias:Dict[str, List[dict]]) -> Dict[str, float]:
 # função principal
 def main() -> None:
     # extração
-    caminho_arquivo:str = 'dia-07-vendas.csv'
+    caminho_arquivo:str = 'vendas.csv'
     vendas:List[dict] = ler_arquivo_csv(caminho_arquivo)
     
     # transformação
