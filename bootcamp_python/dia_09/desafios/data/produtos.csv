@@ -1,0 +1,7 @@
+id_produto,nome_produto,categoria,preco,estoque
+1,"Smartphone XYZ",Eletrônicos,799.99,50
+2,"Laptop ABC",Computadores,2499.99,30
+3,"Fone de Ouvido Bluetooth",Acessórios,199.99,100
+4,"Televisão 55' 4K",Eletrônicos,2999.99,20
+5,"Câmera Digital",Fotografia,1599.99,15
+6,"Tablet 10'",Eletrônicos,599.99,40
