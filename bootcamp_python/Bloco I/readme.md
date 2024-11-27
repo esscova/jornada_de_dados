@@ -5,6 +5,7 @@ Se você está começando a aprender Python e quer entender como essa linguagem 
 
 O material deste repositório são exercícios, desafios ou materiais do meu treinamento na [Jornada de dados](https://suajornadadedados.com.br/).
 
+
 ## Índice
 
 1. [A Linguagem Python](#a-linguagem-python)
@@ -12,10 +13,11 @@ O material deste repositório são exercícios, desafios ou materiais do meu tre
 3. [Estruturas de Dados](#estruturas-de-dados)
 4. [Inputs e Outputs com Python](#inputs-e-outputs-com-python)
 5. [Controles de Fluxo: if, for, while](#controles-de-fluxo-if-for-while)
-6. [TypeError, TypeCheck, TypeConversion](#typeerror-typecheck-typeconversion)
-7. [TypeHints](#typehints)
-8. [Abrindo Arquivos com `with`](#abrindo-arquivos-com-with)
-9. [Try e Except](#try-e-except)
+6. [Funções em Python](#funções-em-python)
+7. [TypeError, TypeCheck, TypeConversion](#typeerror-typecheck-typeconversion)
+8. [TypeHints](#typehints)
+9. [Abrindo Arquivos com `with`](#abrindo-arquivos-com-with)
+10. [Try e Except](#try-e-except)
 
 ---
 
@@ -87,7 +89,7 @@ cliente = {"nome": "João", "idade": 28}
 print(cliente["nome"])  # Saída: João
 ```
 
-Essas estruturas são fundamentais para organizar dados em memória de maneira eficiente. Agora que vimos como organizar dados, vamos aprender a interagir com o usuário ou com arquivos para ler e escrever dados. Vamos explorar os **inputs e outputs** com Python.
+Essas estruturas são fundamentais para organizar dados em memória de maneira eficiente. Agora que sabemos como organizar dados, vamos aprender a interagir com o usuário ou com arquivos para ler e escrever dados. Vamos explorar os **inputs e outputs** com Python.
 
 ---
 
@@ -157,6 +159,43 @@ Agora que vimos como controlar o fluxo do programa, vamos aprender sobre erros c
 
 ---
 
+## Funções em Python
+
+Funções são blocos de código que você pode definir uma vez e reutilizar em todo o seu programa. Elas ajudam a tornar o código mais modular e organizado, além de facilitar a reutilização de lógica.
+
+Como engenheiro de dados, você vai criar funções para tarefas comuns, como carregar dados, limpar dados ou calcular métricas. Em Python, você pode definir funções usando a palavra-chave `def`.
+
+### Exemplo básico de função:
+```python
+# Definindo uma função simples
+def saudacao(nome):
+    return f"Olá, {nome}!"
+
+# Chamando a função
+print(saudacao("João"))
+```
+
+Você pode passar diferentes parâmetros para funções, tornando-as flexíveis para diferentes situações. No contexto de engenharia de dados, isso é útil quando você precisa realizar a mesma operação em vários conjuntos de dados.
+
+### Exemplo prático em Engenharia de Dados:
+```python
+import pandas as pd
+
+# Função para carregar um arquivo CSV
+def carregar_dados(caminho_arquivo):
+    return pd.read_csv(caminho_arquivo)
+
+# Carregando dados de um arquivo CSV
+dados = carregar_dados("dados.csv")
+print(dados.head())
+```
+
+Neste exemplo, a função `carregar_dados` encapsula a operação de carregar dados de um arquivo CSV, tornando seu código mais modular e reutilizável. Funções são essenciais para organizar e otimizar seu trabalho com dados em grandes projetos.
+
+Agora, vamos falar sobre **TypeError**, **TypeCheck** e **TypeConversion**, que são conceitos importantes para garantir que seu código funcione corretamente.
+
+---
+
 ## TypeError, TypeCheck, TypeConversion
 
 Ao manipular dados em Python, você pode acabar tentando realizar operações com tipos de dados incompatíveis, o que pode gerar erros. Em Python, os erros mais comuns relacionados a tipos são o `TypeError` e o `ValueError`.
@@ -178,71 +217,27 @@ Além disso, é importante saber como **converter tipos de dados** quando necess
 ```python
 # Convertendo uma string para inteiro
 idade = int("20")
-print(idade + 10)  # Saída: 30
-```
+print
 
-Essas habilidades são essenciais para garantir que seu código seja robusto e possa lidar com diferentes tipos de dados de maneira eficiente. Agora, vamos explorar como podemos usar **TypeHints** para tornar o código mais legível e fácil de entender.
+(idade + 5)  # Saída: 25
+```
 
 ---
 
 ## TypeHints
 
-Os **TypeHints** são uma forma de adicionar anotações ao código para indicar que tipo de dados uma função espera receber e retornar. Embora Python seja uma linguagem dinâmica, os TypeHints ajudam a melhorar a clareza do código, especialmente quando o projeto cresce.
+Em Python, as **dicas de tipo** (TypeHints) são usadas para indicar o tipo esperado de variáveis e parâmetros de funções. Isso ajuda a melhorar a legibilidade do código e facilita a detecção de erros.
 
-### Exemplo de TypeHint:
+### Exemplo de TypeHints:
 ```python
-# Usando TypeHints para indicar os tipos de dados
-from typing import List
-
-def calcular_media(notas: List[int]) -> float:
-    return sum(notas) / len(notas)
+# Função com tipo de retorno especificado
+def soma(a: int, b: int) -> int:
+    return a + b
 ```
 
-Os TypeHints tornam o código mais fácil de ler, ajudando outros programadores a entender o que o código espera. Isso é especialmente importante em projetos de dados grandes, onde muitos dados diferentes precisam ser manipulados. Agora que aprendemos a usar TypeHints, vamos aprender como abrir arquivos de forma segura usando o `with`.
+As dicas de tipo não alteram o comportamento do código, mas ajudam a documentar suas intenções e são especialmente úteis em projetos maiores, onde a clareza do código é essencial.
 
 ---
 
-## Abrindo Arquivos com `with`
-
-Quando se trabalha com arquivos grandes, como arquivos CSV ou logs, é importante garantir que os arquivos sejam fechados corretamente após o uso. O Python oferece a palavra-chave `with`, que facilita o trabalho com arquivos, garantindo que o arquivo seja fechado automaticamente após a leitura ou gravação.
-
-### Exemplo de uso do `with`:
-
-```python
-# Lendo um arquivo com 'with' para garantir que seja fechado corretamente
-with open("dados.csv", "r") as arquivo:
-    dados = arquivo.readlines()
-    print(dados)
-```
-
-Usar o `with` ao trabalhar com arquivos é uma boa prática, pois evita problemas relacionados a arquivos que não são fechados corretamente. Isso é especialmente importante quando estamos lidando com arquivos grandes, como registros de transações de banco de dados ou grandes volumes de dados em CSV, onde falhas podem resultar em desperdício de memória ou até mesmo corrupção dos dados.
-
----
-
-## Try e Except
-
-Erros e exceções podem ocorrer durante o processamento de dados, especialmente quando estamos lidando com grandes volumes de informações ou interagindo com fontes externas, como APIs ou bancos de dados. Python oferece o tratamento de exceções com `try` e `except`, permitindo capturar e lidar com erros de forma controlada.
-
-### Exemplo de tratamento de erro:
-```python
-# Usando try-except para capturar erros ao tentar ler um arquivo
-try:
-    df = pd.read_csv('dados_input.csv')
-except FileNotFoundError:
-    print("Arquivo não encontrado. Verifique o caminho e tente novamente.")
-```
-
-Essa abordagem é extremamente útil em pipelines de dados, onde você pode precisar tratar falhas na leitura de arquivos ou na conexão com bancos de dados, garantindo que o processo continue funcionando, mesmo quando erros acontecem.
-
-O uso do `try` e `except` ajuda a garantir que o código não falhe inesperadamente, oferecendo uma maneira de lidar com falhas de maneira controlada.
-
----
-
-### Conclusão
-
-Este repositório tem como objetivo fornecer uma base sólida para iniciantes em Python, especialmente focando em situações comuns enfrentadas por engenheiros de dados. Ao dominar esses fundamentos, você estará mais preparado para trabalhar com dados de maneira eficaz, desde o processamento de arquivos até a implementação de lógicas de fluxo de controle e tratamento de erros.
-
-Python é uma linguagem poderosa e, com esses conceitos básicos, você estará bem equipado para começar a construir seus próprios scripts de automação de dados, manipular grandes volumes de dados e lidar com problemas que surgem durante o processamento e análise de dados.
-
-Com o tempo, você vai perceber que, embora o Python seja uma linguagem simples, ele oferece ferramentas extremamente poderosas que são essenciais para qualquer engenheiro de dados. O próximo passo é continuar praticando e explorando mais profundamente as bibliotecas como Pandas, NumPy e outras ferramentas avançadas, que vão ampliar ainda mais suas capacidades no mundo da engenharia de dados.
-
+## Considerações finais
+Neste repositório, exploramos conceitos fundamentais de Python para engenheiros de dados iniciantes. Desde os tipos de dados básicos até funções e tratamento de erros, você está agora mais preparado para lidar com os desafios do dia a dia, como manipulação de arquivos, automação de processos e limpeza de dados. Python é uma ferramenta poderosa, e com esses fundamentos, você está pronto para avançar para tarefas mais complexas.
