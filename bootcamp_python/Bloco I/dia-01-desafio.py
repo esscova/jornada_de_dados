@@ -1,13 +1,6 @@
-"""
-descricao: Calculo de bonus com entrada do usuario
-autor: wellington moreira
-"""
 
-# Desafio 
-print('\n'+'-'*100)
-print(
 """
-Desafio
+Desafio: Calculo de bonus com entrada do usuario
  
 Escreva um programa em Python que solicita ao usuário para:
 	- digitar seu nome, 
@@ -20,15 +13,12 @@ O programa deve:
     
 Constante:
 	- o valor do bônus fixo é de 1000
-""")
+"""
 
-print('-'*100+'\n')
-
-
+print('\n'+'-'*100)
 nome = input('Digite seu nome: ')
 salario = float(input('Digite seu salário atual: ').replace(',','.'))
 bonus = float(input('Digite seu bonus atual(%): ').replace(',','.'))
 bonus_fixo = 1000
 kpi = bonus_fixo + (salario*bonus)
-
 print(f'\nOlá {nome}, O cálculo do KPI do bônus é de: {kpi}\n ')
