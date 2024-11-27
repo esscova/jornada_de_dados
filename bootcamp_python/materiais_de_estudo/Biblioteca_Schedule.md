@@ -146,11 +146,7 @@ A limpeza periódica de dados e a realização de backups são tarefas essenciai
 
 ---
 
-### 
-
----
-
-### 6. Exercícios para Práticos para Engenheiros de Dados com a Biblioteca `schedule`
+### 5. Exercícios para Práticos para Engenheiros de Dados com a Biblioteca `schedule`
 
 Agora que você tem uma boa compreensão da biblioteca `schedule` e seus casos de uso em engenharia de dados, vamos colocar esses conceitos em prática com 10 exercícios. Cada exercício tem uma proposta de solução, permitindo que você explore ainda mais como automatizar tarefas recorrentes em um fluxo de dados.
 
