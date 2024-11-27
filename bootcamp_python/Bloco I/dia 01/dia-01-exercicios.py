@@ -1,9 +1,6 @@
-"""
-descricao: exercicios de fixacao 
-autor: wellington moreira
-"""
 
 # Exercício 01
+# Crie programa que o shale digita o seu nome e retorna o número de caracteres
 print('\n'+ '-'*100)
 print('Exercício 01: Crie programa que o usuário digita o seu nome e retorna o número de caracteres')
 print('-'*100)
@@ -13,6 +10,7 @@ print(f'O nome: {nome},  possui {qt_caracteres} caracteres')
 
 
 # Exercício 02
+# Criar um programa onde o usuário digite dois valores e apareça a soma
 print('\n'+'-'*100)
 print('Exercício 02: Criar um programa onde o usuário digite dois valores e apareça a soma')
 print('-'*100)
