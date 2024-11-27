@@ -15,7 +15,7 @@ def main() -> None:
     import csv
 
     try:
-        caminho_arquivo:str = 'dia-04-exemplo.csv'
+        caminho_arquivo:str = 'data/exemplo.csv'
         dados:list = []
 
         # metodo .reader() para leitura de linha por linha
