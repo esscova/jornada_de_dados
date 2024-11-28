@@ -171,18 +171,21 @@ if __name__ == '__main__':
     leitor.ler_arquivo()
     leitor.contar_linhas()
 
-    from utils import gerar_arquivo_csv, gerar_arquivo_json
+    from utils import FileGenerator
+    log_path = 'data/log.txt'
+    caminho_arquivo_csv = 'data/arquivo.csv'
 
-    caminho_arquivo = 'data/arquivo.csv'
+    file_generator = FileGenerator(log_path)
+    file_generator.generate_csv('data/arquivo.csv', 10)
+
     num_linhas = 10
-    gerar_arquivo_csv(caminho_arquivo, num_linhas)
 
-    leitor = LeitorCSV(caminho_arquivo)
+    leitor = LeitorCSV(caminho_arquivo_csv)
     leitor.ler_arquivo()
     leitor.buscar_dados('Email', 'jrice@example.org')
 
     caminho_arquivo_json = 'data/arquivo.json'
-    gerar_arquivo_json(caminho_arquivo_json, num_linhas)
+    file_generator.generate_json('data/arquivo.json', 10)
 
     leitor_json = LeitorJSON(caminho_arquivo_json)
     leitor_json.ler_arquivo()
