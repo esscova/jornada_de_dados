@@ -1,0 +1,4 @@
+Enviar relatório diário, 09:00, diário
+Fazer backup semanal, 02:00, semanal
+Limpando logs, 00:00, diário
+Enviar relatório mensal, 06:00, mensal
