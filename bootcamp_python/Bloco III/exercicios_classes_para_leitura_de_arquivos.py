@@ -175,8 +175,8 @@ if __name__ == '__main__':
     log_path = 'data/log.txt'
     caminho_arquivo_csv = 'data/arquivo.csv'
 
-    file_generator = FileGenerator(log_path)
-    file_generator.generate_csv('data/arquivo.csv', 10)
+    file_generator = FileGenerator()
+    file_generator.generate_csv('arquivo', 10)
 
     num_linhas = 10
 
@@ -185,7 +185,7 @@ if __name__ == '__main__':
     leitor.buscar_dados('Email', 'jrice@example.org')
 
     caminho_arquivo_json = 'data/arquivo.json'
-    file_generator.generate_json('data/arquivo.json', 10)
+    file_generator.generate_json('arquivo', 10)
 
     leitor_json = LeitorJSON(caminho_arquivo_json)
     leitor_json.ler_arquivo()
