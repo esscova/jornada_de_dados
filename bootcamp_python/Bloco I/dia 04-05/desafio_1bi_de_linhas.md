@@ -1,4 +1,4 @@
-## Aula com apresentação do projet `1 bilhão de linhas com Python`
+## Aula com apresentação do projeto `1 bilhão de linhas com Python`
 
 ### Desafio
 - Clonar o repositorio do projeto [link](https://github.com/lvgalvao/One-Billion-Row-Challenge-Python)

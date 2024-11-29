@@ -1,8 +1,8 @@
 """
 
 descricao: exercicios de fixacao
-autor: wellington moreira
-
+    - dia 02 bootcamp python: Inteiros, Reais, Strings e Booleanos
+    
 indice:
     Exercícios
      1 - Inteiros - linha 22

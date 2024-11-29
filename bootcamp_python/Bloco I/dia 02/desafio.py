@@ -1,10 +1,11 @@
 """
+Desafio 2: Verificação de Qualidade de Dados
 
-descricao: Desafio - Refatorar o projeto da aula anterior evitando Bugs!
-autor: wellington moreira
+Resolva os bugs relacionados ao tratamento de entradas inválidas que não podem ser convertidas para um número de ponto flutuante e 
+prevenção de valores negativos para salário e bônus, você pode modificar o código diretamente. 
+Também adicione verificações após a tentativa de conversão, para garantir que os valores sejam positivos.
 
 """
-# Para resolver os bugs identificados — tratamento de entradas inválidas que não podem ser convertidas para um número de ponto flutuante e prevenção de valores negativos para salário e bônus, você pode modificar o código diretamente. Isso envolve adicionar verificações adicionais após a tentativa de conversão para garantir que os valores sejam positivos.
 def verifica_string(string:str) -> str:
     if len(string) == 0:
         raise ValueError("O nome não pode estar vazio.")

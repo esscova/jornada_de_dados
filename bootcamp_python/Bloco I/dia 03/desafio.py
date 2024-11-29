@@ -1,6 +1,6 @@
 """
-descricao: dia 03 bootcamp python - refatorar o projeto da aula anterior com tratamento de erros e prevenção de bugs
-autor: Wellington Moreira
+dia 03 bootcamp python 
+Desafio: Refatorar o projeto da aula anterior (desafio 02) com tratamento de erros e prevenção de bugs
 
 """
 

@@ -109,7 +109,7 @@ Exercício 15. Processamento de Dados com Condição de Parada
 Processar itens de uma lista até encontrar um valor específico que indica a parada.
     """
 
-    def exercicio_01(self:str) -> None:
+    def exercicio_01(self) -> None:
         print(self.titulo01)
         try:
             
@@ -127,7 +127,7 @@ Processar itens de uma lista até encontrar um valor específico que indica a pa
         except ValueError:
             print('Tem que ser um numero')
 
-    def exercicio_02(self:str) -> None:
+    def exercicio_02(self) -> None:
         print(self.titulo_02)
         try:
             temperatura:float = float(input('Digite a temperatura: ').strip().replace(',', '.'))
@@ -144,7 +144,7 @@ Processar itens de uma lista até encontrar um valor específico que indica a pa
         except ValueError:
             print('Tem que ser um numero')
 
-    def exercicio_03(self:str) -> None:
+    def exercicio_03(self) -> None:
         print(self.titulo_03)
         try:
             log:dict = {'timestamp': '2021-06-23 10:00:00', 'level': 'ERROR', 'message': 'Falha na conexão'}
@@ -155,7 +155,7 @@ Processar itens de uma lista até encontrar um valor específico que indica a pa
         except ValueError:
             print('Erro na obtencao do log')
 
-    def exercicio_04(self:str) -> None:
+    def exercicio_04(self) -> None:
         print(self.titulo_04)
         try:
             email:str = input('Digite o email: ').strip()
@@ -205,7 +205,7 @@ Processar itens de uma lista até encontrar um valor específico que indica a pa
         except ValueError as e:
             print(e)
 
-    def exercicio_05(self:str) -> None:
+    def exercicio_05(self) -> None:
         print(self.titulo_05)
         try:
             transacao:dict = {'valor': 12000, 'hora': 20}
@@ -219,7 +219,7 @@ Processar itens de uma lista até encontrar um valor específico que indica a pa
         except ValueError:
             print('Erro na obtencao da transação')
 
-    def exercicio_06(self:str) -> None:
+    def exercicio_06(self) -> None:
         print(self.titulo_06)
         try:
             texto:str = input('Digite o texto: ').strip().lower().replace(',''', '').replace('.', '')
@@ -239,7 +239,7 @@ Processar itens de uma lista até encontrar um valor específico que indica a pa
         except ValueError:
             print('Erro na obtencao do texto')
 
-    def exercicio_07(self:str) -> None:
+    def exercicio_07(self) -> None:
         print(self.titulo_07)
         try:
             while True:
@@ -264,7 +264,7 @@ Processar itens de uma lista até encontrar um valor específico que indica a pa
         except ValueError:
             print('Erro na obtencao dos números')
 
-    def exercicio_08(self:str) -> None:
+    def exercicio_08(self) -> None:
         print(self.titulo_08)
         try:
             usuarios:list = [
@@ -292,7 +292,7 @@ Processar itens de uma lista até encontrar um valor específico que indica a pa
         except ValueError:
             print('Erro na execução, tente novamente.')
 
-    def exercicio_09(self:str) -> None:
+    def exercicio_09(self) -> None:
         print(self.titulo_09)
         try:
             while True:
@@ -310,7 +310,7 @@ Processar itens de uma lista até encontrar um valor específico que indica a pa
         except ValueError:
             print('Erro na obtencao dos números')
 
-    def exercicio_10(self:str) -> None:
+    def exercicio_10(self) -> None:
         print(self.titulo_10)
         try:
             vendas:list = [
@@ -343,7 +343,7 @@ Processar itens de uma lista até encontrar um valor específico que indica a pa
         except ValueError:
             print('Erro na obtencao dos números')
 
-    def exercicio_11(self:str) -> None:
+    def exercicio_11(self) -> None:
         print(self.titulo_11)
         try:
             dados:list=[]
@@ -362,7 +362,7 @@ Processar itens de uma lista até encontrar um valor específico que indica a pa
         except ValueError:
             print('Erro na obtencao dos dados')
 
-    def exercicio_12(self:str) -> None:
+    def exercicio_12(self) -> None:
         print(self.titulo_12)
         while True:
             try:
@@ -389,7 +389,7 @@ Processar itens de uma lista até encontrar um valor específico que indica a pa
             except TypeError as te:
                 print(f'Erro: {te}')
 
-    def exercicio_13(self:str) -> None:
+    def exercicio_13(self) -> None:
         print(self.titulo_13)
 
         try:
@@ -403,7 +403,7 @@ Processar itens de uma lista até encontrar um valor específico que indica a pa
         except ValueError as ve:
             print(f'Erro: {ve}')
 
-    def exercicio_14(self:str) -> None:
+    def exercicio_14(self) -> None:
         print(self.titulo_14)
 
         try:
@@ -434,7 +434,7 @@ Processar itens de uma lista até encontrar um valor específico que indica a pa
         except ValueError as ve:
             print(f'Erro: {ve}')
 
-    def exercicio_15(self:str) -> None:
+    def exercicio_15(self) -> None:
         print(self.titulo_15)
 
         try:
