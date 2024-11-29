@@ -15,18 +15,13 @@ class FileGenerator:
             output_dir (str): Diretório onde os arquivos serão salvos. Padrão: 'data'.
             log_file (str): Nome do arquivo de log. Padrão: 'log.txt'.
         """
-        # Diretório base: onde o script está localizado
         self.base_dir = os.path.dirname(os.path.abspath(__file__))
-        
-        # Diretório de saída absoluto
         self.output_dir = os.path.join(self.base_dir, output_dir)
         os.makedirs(self.output_dir, exist_ok=True)  
         
-        # Configuração do logger
         self.log_path = os.path.join(self.output_dir, log_file)
         self.setup_logger(self.log_path)
         
-        # Gerador de dados
         self.fake = Faker()
         Faker.seed(42)
 

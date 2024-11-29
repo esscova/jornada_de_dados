@@ -126,14 +126,4 @@ class GeradorDeVendas:
         logger.info("Vendas geradas com sucesso!")
         return vendas
 
-
-def main():
-    # GeradorDeDados().gerar_dados() # teste gerador de dados
-    # BancoDeDadosFalso().gerar_usuarios() # teste gerador de usuarios
-    # for i in GeradorDeProdutos().gerar_produtos(): # teste gerador de produtos
-    for i in GeradorDeVendas().gerar_vendas(): # teste gerador de vendas
-        print(i)
-
-if __name__ == "__main__":
-    main()
     
