@@ -23,8 +23,7 @@
 
 
 from sqlalchemy import create_engine, Column, Integer, String, Date, Float
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import declarative_base
 
 
 engine = create_engine('sqlite:///data/empresa.db')  # cria a engine para o banco de dados
