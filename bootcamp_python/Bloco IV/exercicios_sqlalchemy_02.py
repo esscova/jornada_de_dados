@@ -14,8 +14,7 @@ Dicas:
 """
 
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker, declarative_base
 from exercicios_sqlalchemy_01 import Funcionario
 from faker import Faker
 from datetime import datetime
@@ -35,7 +34,7 @@ funcionarios = [
         data_admissao=datetime.strptime(faker.date(), '%Y-%m-%d').date(),  # converte para datetime ja que o faker gera strings
         salario=faker.random_number(digits=5)
     )
-    for _ in range(5)
+    for _ in range(500)
 ]
 
 session.add_all(funcionarios)
